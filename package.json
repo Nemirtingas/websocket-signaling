@@ -1,0 +1,14 @@
+{
+  "name": "websocket-signaling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Nemirtingas/socketio-signaling.git",
+  "author": "Nemirtingas <nemirtingas@noreply.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
