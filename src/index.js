@@ -17,10 +17,16 @@ function isIdGalaxy(id) {
     return idRe.test(id) && parseInt(id) > 0;
 }
 
+function isIdRallyHere(id) {
+    const idRe = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/i;
+	return idRe.test(id);
+}
+
 function isId(type, id) {
     if (type === "epic") return isIdEpic(id);
     if (type === "steam") return isIdSteam(id);
     if (type === "galaxy") return isIdGalaxy(id);
+    if (type === "rallyhere") return isIdRallyHere(id);
 
     console.error(`Emulator ${type} unknown.`);
     return false;
